@@ -4,6 +4,8 @@
   --secondary: #161a30;
   --border-custom: 1px solid rgba(128, 128, 128, 0.452);
 }
+
+
 * {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
