@@ -1,0 +1,120 @@
+:root {
+  --primary: #4e4feb;
+  --primary-hover: #36369b;
+  --secondary: #161a30;
+  --border-custom: 1px solid rgba(128, 128, 128, 0.452);
+}
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  color: white;
+  text-align: center;
+  background: var(--primary);
+  padding: 40px 0px;
+}
+
+nav {
+  text-align: center;
+  background: var(--secondary);
+  padding: 20px 0px;
+}
+
+nav > a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+nav > a:hover {
+  background: #535353;
+  transition: 400ms;
+}
+
+section {
+  max-width: 1260px;
+  padding: 50px;
+  margin: 50px auto;
+  border: 1px solid rgba(128, 128, 128, 0.452);
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+section > h3,
+p {
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+section > form {
+  text-align: left;
+  border: var(--border-custom);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 300px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+section > form > input[type] {
+  width: 100%;
+  margin: 8px 0px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  border: var(--border-custom);
+}
+section > form > button[type] {
+  width: 100%;
+  margin: 8px 0px;
+  padding: 10px 10px;
+  background: var(--primary);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  transition: 0.4s;
+}
+
+section > form > button[type]:hover {
+  background: var(--primary-hover);
+  transition: 0.4s;
+}
+
+section > img {
+  margin: auto;
+}
+
+footer {
+  color: white;
+  text-align: center;
+  background: var(--secondary);
+  padding: 20px 0px;
+}
+
+table,
+tr,
+td,
+th {
+  border-collapse: collapse;
+  border: var(--border-custom);
+  padding: 20px;
+}
+
+tr:nth-of-type(even) {
+  background: #dfdfdf;
+}
+
+article > h2 {
+  margin-bottom: 20px;
+}
+
+td > h5 {
+  margin-bottom: 10px;
+}
