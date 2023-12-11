@@ -1,7 +1,3 @@
-
-# Cara run di komputer agar berjalan dengan baik 
-- clone repository ini 
-=======
 # Cara run di komputer agar berjalan dengan baik
 
 - clone repository ini
