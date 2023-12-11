@@ -8,47 +8,69 @@
     />
   </head>
   <body>
-    <header>
-      <h1>Welcome</h1>
-    </header>
-    <nav>
-      <a href="/src/index.html">Home</a>
-      <a href="/src/about.html">About</a>
-    </nav>
+    <div class="container">
+      <header>
+        <div class="brand">
+          <img
+            src="hero.avif"
+            alt=""
+          />
+          <h3>Welcome</h3>
+        </div>
+        <nav>
+          <a
+            class="active raise"
+            href="index.html"
+            >Home</a
+          >
+          <a
+            class="raise"
+            href="about.html"
+            >About</a
+          >
+        </nav>
+      </header>
 
-    <section>
-      <h3>Welcome to our landing page</h3>
-      <p>Please login to access other features</p>
+      <section home="home">
+        <form action="/">
+          <h3>Welcome to our landing page</h3>
+          <p>Please login to access other features</p>
+          <label for="">Username :</label>
+          <br />
+          <input
+            type="text"
+            placeholder="Enter your username"
+          />
+          <br />
+          <label for="">Password :</label>
+          <br />
+          <input
+            type="password"
+            placeholder="Enter your password"
+          />
+          <br />
+          <button
+            class="raise"
+            type="submit"
+          >
+            Login
+          </button>
+        </form>
 
-      <form action="/">
-        <label for="">Username :</label>
-        <br />
-        <input
-          type="text"
-          placeholder="Enter your username"
-        />
-        <br />
-        <label for="">Password :</label>
-        <br />
-        <input
-          type="password"
-          placeholder="Enter your password"
-        />
-        <br />
-        <button type="submit">Login</button>
-      </form>
+        <article class="home">
+          <img
+            src="hero.avif"
+            alt=""
+            width="200px"
+          />
+          <h4>
+            "The biggest adventure you can take is to live the life of your
+            dreams" - Oprah Winfrey
+          </h4>
+        </article>
+      </section>
 
-      <img
-        src="hero.avif"
-        alt=""
-        width="200px"
-      />
-      <article>
-        "The biggest adventure you can take is to live the life of your dreams"
-        - Oprah Winfrey
-      </article>
-    </section>
-
-    <footer>© 2023 BTJ Academy</footer>
+      <footer>© 2023 BTJ Academy</footer>
+    </div>
   </body>
 </html>
