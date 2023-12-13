@@ -1,16 +1,13 @@
-# Cara run di komputer agar berjalan dengan baik
-
-- clone repository ini
+# Cara run di komputer agar berjalan dengan baik 
+- clone repository ini 
 - `git clone https://github.com/akbarchives/btj-academy-fe-akbar.git`
 - buka project dengan vscode
 - gunakan ekstensi live server untuk menjalankan
 
 # Task Day 1
-
-Create About Page with Your Profile
+Create About Page with Your Profile 
 
 Use as many HTML tag as you can and add your profile about :
-
 - Image Profile
 - Name
 - One paragraph about yourself
@@ -54,3 +51,11 @@ terdiri dari :
 warna color palette senada dengan home atau login page
 layout sama dengan home (background page, header, footer)
 
+# Task Day 4
+add form validation
+- animation on logo 360 degree
+- show password checkbox
+- field tidak boleh kosong
+- passowrd minimal 1 huruf besar, i huruf kecil, 1 number, 1 symbol
+- Capslock warning
+- redirect to about page if valid
