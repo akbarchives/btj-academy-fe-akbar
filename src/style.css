@@ -1,6 +1,7 @@
 :root {
   --primary: #2b3499;
   --secondary: #ff6c22;
+  --optional: #fff0e9;
 
   --border-custom: 1px solid rgba(128, 128, 128, 0.452);
 }
@@ -17,8 +18,10 @@ body {
 }
 
 .container {
+  margin: 2% auto;
+  transform: scale(90%);
+  max-width: 1366px;
   background: white;
-  margin: 5%;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -39,7 +42,10 @@ header > div {
 
 header > div > img {
   width: 100px;
-  mix-blend-mode: multiply;
+  transition: 1s ease-in;
+}
+header > div > h3 {
+  z-index: 1;
 }
 
 nav {
@@ -92,6 +98,12 @@ section > form > p {
   margin-bottom: 2rem;
   font-size: 1rem;
 }
+
+#capsLockWarning {
+  visibility: hidden;
+  color: orange;
+}
+
 article {
   display: flex;
   justify-content: center;
@@ -106,7 +118,7 @@ article > img {
 }
 
 section > form {
-  background: #eaeafc;
+  background: var(--optional);
   text-align: left;
   border: var(--border-custom);
   border-radius: 10px;
@@ -119,7 +131,6 @@ section > form {
 
 section > form > input[type] {
   width: 100%;
-  margin: 0.5rem 0;
   padding: 0.5rem;
   border-radius: 5px;
   border: var(--border-custom);
@@ -135,9 +146,20 @@ section > form > button[type] {
   transition: 0.4s;
 }
 
+section > form > label {
+  margin-top: 16px;
+}
+
 section > form > button[type]:hover {
   background: var(--secondary);
   transition: 0.4s;
+}
+
+#usernameError,
+#passwordError {
+  color: red;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
 }
 
 section > img {
@@ -171,7 +193,7 @@ td > h5 {
 }
 
 .about {
-  background: #fff0e9;
+  background: var(--optional);
 }
 
 .intro {
@@ -214,8 +236,7 @@ mark {
   text-decoration: none;
   transition: 400ms ease;
 }
-.btn {
-}
+
 .linkedin {
   background: rgb(53, 53, 243);
 }
@@ -235,13 +256,12 @@ mark {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  /* background: #fff0e9; */
   align-items: center;
 }
 
 .work {
   flex-direction: row-reverse;
-  background: #fff0e9;
+  background: var(--optional);
 }
 
 .list {
@@ -301,6 +321,7 @@ mark {
 /* for phone */
 @media only screen and (max-width: 600px) {
   .container {
+    transform: scale(100%);
     margin: 0;
     border-radius: 0;
   }

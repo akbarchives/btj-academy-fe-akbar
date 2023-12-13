@@ -6,14 +6,20 @@
       rel="stylesheet"
       href="style.css"
     />
+    <script
+      src="main.js"
+      async
+    ></script>
   </head>
   <body>
     <div class="container">
       <header>
         <div class="brand">
           <img
+            id="brandImage"
             src="hero.avif"
             alt=""
+            onclick="rotateImage()"
           />
           <h3>Welcome</h3>
         </div>
@@ -32,24 +38,47 @@
       </header>
 
       <section home="home">
-        <form action="/">
+        <form
+          onsubmit="validateForm(event)"
+          method="post"
+          id="formLogin"
+          action="about.html"
+        >
           <h3>Welcome to our landing page</h3>
           <p>Please login to access other features</p>
-          <label for="">Username :</label>
+          <label for="username">Username :</label>
           <br />
           <input
             type="text"
+            name="username"
+            id="username"
             placeholder="Enter your username"
+            onkeyup="usernameValidation()"
+            autocomplete="username"
           />
+          <label id="usernameError">please fill username</label>
           <br />
-          <label for="">Password :</label>
+          <label for="password">Password :</label>
           <br />
           <input
             type="password"
+            name="password"
+            id="password"
             placeholder="Enter your password"
+            onkeyup="passwordValidation()"
           />
+          <label id="passwordError">please fill password</label>
           <br />
+          <div>
+            <input
+              type="checkbox"
+              id="showPassword"
+            />
+            <label for="showPassword">show password</label>
+          </div>
+          <p id="capsLockWarning">Caps Lock is on.</p>
           <button
+            id="submitForm"
             class="raise"
             type="submit"
           >
