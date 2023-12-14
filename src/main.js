@@ -84,11 +84,8 @@ function validateForm(e) {
     fetch('https://dummyjson.com/users')
       .then(res => res.json())
       .then(data => {
-        // console.log(data.users[1]);
         const users = data.users;
-        console.log(users);
 
-        // Simulating a login process (replace this with your actual login process)
         function loginUser(username, password) {
           const foundUser = users.find(
             user => user.username === username && user.password === password
@@ -97,11 +94,8 @@ function validateForm(e) {
           if (foundUser) {
             console.log('Login successful!');
             window.location.href = 'about.html';
-
-            // Perform actions for successful login
           } else {
-            console.log('Invalid username or password');
-            // Handle unsuccessful login
+            alert('wrong username or password');
           }
         }
 
@@ -111,6 +105,89 @@ function validateForm(e) {
   }
 }
 
-fetch('https://dummyjson.com/users')
-  .then(res => res.json())
-  .then(console.log);
+// add animation with jquery effects
+function applyHoverEffect(element) {
+  $(element).hover(
+    function () {
+      $(this).css({
+        'background-color': '#fff',
+        'background-image': `linear-gradient(135deg, var(--third) 25%, transparent 25%), linear-gradient(225deg, var(--third) 25%, transparent 25%), linear-gradient(45deg, var(--third) 25%, transparent 25%), linear-gradient(315deg, var(--third) 25%, #fff 25%)`,
+        'background-position': '40px 0, 40px 0, 0 0, 0 0',
+        'background-size': '80px 80px',
+        'background-repeat': 'repeat',
+        transition: '800ms ease',
+      });
+    },
+    function () {
+      $(this).css({
+        'background-color': 'white',
+        'background-image': 'none',
+        'background-position': '0%',
+        'background-size': '0',
+        'background-repeat': 'no-repeat',
+        transition: '800ms ease',
+      });
+    }
+  );
+}
+
+let themeActive = 0;
+const theme = [
+  {
+    theme: '0',
+    primary: '#2b3499',
+    secondary: '#ff6c22',
+    third: '#FFE0D0',
+  },
+  {
+    theme: '1',
+    primary: '#08D9D6',
+    secondary: '#252A34',
+    third: '#B4B4B4',
+  },
+  {
+    theme: '2',
+    primary: '#2C2955',
+    secondary: '#4C5FB1',
+    third: '#B3C1FF',
+  },
+  {
+    theme: '3',
+    primary: '#231A31',
+    secondary: '#E42F45',
+    third: '#FFC0C7',
+  },
+  {
+    theme: '4',
+    primary: '#230444',
+    secondary: '#90303D',
+    third: '#FFC3CB',
+  },
+  {
+    theme: '5',
+    primary: '#0C056D',
+    secondary: '#590D82',
+    third: '#E3AFFF',
+  },
+];
+
+function changeTheme() {
+  $('#changeTheme').on('click', function () {
+    if (themeActive == theme.length - 1) {
+      themeActive = 0;
+    } else {
+      themeActive += 1;
+    }
+    $('body').css({
+      '--primary': `${theme[themeActive].primary}`,
+      '--secondary': `${theme[themeActive].secondary}`,
+      '--third': `${theme[themeActive].third}`,
+    });
+  });
+  applyHoverEffect('.about');
+  applyHoverEffect('.education');
+  applyHoverEffect('.work');
+}
+$(document).ready(function () {
+  changeTheme();
+});

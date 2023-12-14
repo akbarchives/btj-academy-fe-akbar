@@ -7,10 +7,16 @@
       href="style.css"
     />
     <script src="jquery.min.js"></script>
+
     <script
       src="main.js"
       async
     ></script>
+    <link
+      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
     <div class="container">
@@ -39,6 +45,7 @@
 
       <section home="home">
         <form
+          data-aos="fade-up"
           onsubmit="validateForm(event)"
           method="post"
           id="formLogin"
@@ -86,7 +93,10 @@
           </button>
         </form>
 
-        <article class="home">
+        <article
+          class="home"
+          data-aos="fade-up"
+        >
           <img
             src="hero.avif"
             alt=""
@@ -101,5 +111,9 @@
 
       <footer>© 2023 BTJ Academy</footer>
     </div>
+    <button id="changeTheme">Change Theme</button>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
