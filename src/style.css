@@ -1,7 +1,7 @@
 :root {
   --primary: #2b3499;
   --secondary: #ff6c22;
-  --optional: #fff0e9;
+  --optional: #d6d8f0;
 
   --border-custom: 1px solid rgba(128, 128, 128, 0.452);
 }
@@ -169,6 +169,7 @@ section > img {
 footer {
   text-align: center;
   padding: 1.5rem 0;
+  border-top: 1px solid var(--optional);
 }
 
 table,
